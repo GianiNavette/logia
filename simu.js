@@ -38,13 +38,25 @@ function myFunction() {
             document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<div><button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh1+' ˅</button><button class="btn" onClick="removeEl(this,'+a+','+c+',1)"><i class="fa fa-trash"></i></button></div><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
             break;
         case 'colonne2':
-            d1.insertAdjacentHTML('beforebegin', '<div class="colonne2"><select><option value="h2p" >Titre secondaire + Paragraphe</option><option value="divp" >Paragraphe</option><option value="divimg" >image</option></select><select><option value="h2p" >Titre secondaire + Paragraphe</option><option value="divp" >Paragraphe</option><option value="divimg" >image</option></select></div>');
+            d1.insertAdjacentHTML('beforebegin', '<div class="colonne2"><div><select onchange="addEltodiv(this)" ><option value="h2p" >Titre secondaire + Paragraphe</option><option value="divp" >Paragraphe</option><option value="divimg" >image</option></select></div><div><select><option value="h2p" >Titre secondaire + Paragraphe</option><option value="divp" >Paragraphe</option><option value="divimg" >image</option></select></div></div>');
             break;    
         default:
           console.log(`Easter Eggs`);
       }
 
 
+}
+function addEltodiv(x){
+    c = + 1;
+    switch(x.value) {
+        case 'divimg':
+            b = b + 1;
+            x.insertAdjacentHTML('beforebegin','<img onclick="uploadImage('+b+','+c+')"; src="placeholder.jpg" id="image'+b+'"><img/>' );
+            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<div><button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)">Image '+b+' ˅</button><button class="btn" onClick="removeEl(this,'+b+','+c+',2)"><i class="fa fa-trash"></i></button></div><div id="objet'+c+'" style="display:block;"><input id="inputimage'+b+'" type="file" onchange="readURL(this,'+b+');" /><input type="range" min="1" max="100" step="1" value="40" oninput="changeSize(this.value,'+b+')" onchange="changeSize(this.value,'+b+')"><p class="settingp" id="valSizeImg'+b+'" >40%</p></div></div>');
+            break;
+    default:
+
+    }
 }
 
 function myFunction2(var1) {
@@ -186,3 +198,4 @@ function removeEl(trashbutton,contentId,objetId,textorimage) {
     mysettingobj.remove();
     mysettingcontentobj.remove();
 }
+
