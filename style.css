@@ -6,6 +6,17 @@ padding-right:0px;
 height:100px;
 background-color:black;
 }
+h1 {
+font-size: 36px;
+
+}
+h2 {
+    font-size: 26px;
+    
+    }
+p {
+    font-size:18px;
+}
 #sidenav {
     width: 200px;
     height:100vh;
@@ -26,7 +37,6 @@ background-color:black;
 #main {
     transition:ease 300ms;
     margin-left: 200px; /* Same width as the sidebar + left position in px */
-    font-size: 28px; /* Increased text to enable scrolling */
     
   }
   
@@ -78,3 +88,9 @@ input[type="file"] {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
+
+  [contentEditable="true"]:empty:before {
+    content: attr(data-placeholder);
+    color: grey;
+  }
+  
