@@ -16,8 +16,6 @@
     <option value="h2">Titre secondaire</option>
     <option value="p">Paragraphe</option>
     <option value="img">image</option>
-    <option value="spider">Spider</option>
-    <option value="goldfish">Goldfish</option>
 </select>
 <button onclick="myFunction()">Ajoutez</button>
 
@@ -31,7 +29,51 @@
         <div class="bar3"></div>
       </div>
     <p>Réglage</p>
-    <div>
+    <button onclick="toggleMainSetting(this)" >Réglage principal ˄</button>
+    <div id="reglageprincipal">
+    <p style="text-align: center;">Taille des titres principales</p>
+    <select onchange="changefontSize(this,h1)" size="1">
+        <option>30px</option>
+        <option>32px</option>
+        <option>34px</option>
+        <option selected>36px</option>
+        <option>38px</option>
+        <option>40px</option>
+        <option>42px</option>
+        <option>44px</option>
+        <option>46px</option>
+        <option>48px</option>
+        <option>50px</option>
+      </select>
+      <p style="text-align: center;">Taille des titres secondaires</p>
+    <select onchange="changefontSize(this,h2)" size="1">
+        <option>20px</option>
+        <option>22px</option>
+        <option>24px</option>
+        <option selected>26px</option>
+        <option>28px</option>
+        <option>30px</option>
+        <option>32px</option>
+        <option>34</option>
+        <option>36</option>
+        <option>38</option>
+        <option>40</option>
+      </select>
+      <p style="text-align: center;">Taille des paragraphes</p>
+      <select onchange="changefontSize(this,p)" size="1">
+        <option>12px</option>
+        <option>14px</option>
+        <option>16px</option>
+        <option selected>18px</option>
+        <option>20px</option>
+        <option>22px</option>
+        <option>24px</option>
+        <option>26</option>
+        <option>28</option>
+        <option>30</option>
+        <option>32</option>
+      </select>
+      <div>
         <input type="color" id="headercolor" name="head2" onChange="myFunction3()"
                value="#000000">
         <label>Fond barre de menu </label>
@@ -41,6 +83,8 @@
         <input type="color" id="bodycolor" name="head2" onChange="myFunction4()"
                value="#FFFFFF">
         <label>Fond de page </label>
+    
+    </div>
     
     <div class="menutext"><div id="myList2">
     

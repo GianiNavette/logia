@@ -22,19 +22,19 @@ function myFunction() {
         case 'h1':
             nbh1=nbh1+1;
             a = a + 1;
-            d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'"><'+value3+'/>');
+            d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'">Texte<'+value3+'/>');
             document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh1+' ˅</button><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
         break;
           case 'h2':
             nbh2=nbh2+1;
             a = a + 1;
-            d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'"><'+value3+'/>');
+            d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'">Texte<'+value3+'/>');
             document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh2+' ˅</button><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
           break;
         case 'p':
             nbp=nbp+1;
             a = a + 1;
-            d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'"><'+value3+'/>');
+            d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'">Texte<'+value3+'/>');
             document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbp+' ˅</button><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
           break;
         default:
@@ -136,5 +136,33 @@ function hideOtherEl(buttontext,objetId,bool) {
     }  
     
   }
+
+}
+function changefontSize(selectTag,tagNamevar) {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    
+    var x = document.getElementsByTagName("h1");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.fontSize = listValue;
+    }
+}
+function toggleMainSetting(buttontext) {
+
+    let str = buttontext.innerHTML
+    str = str.slice(0, -1); 
+    
+    var x = document.getElementById("reglageprincipal");
+
+  if (x.style.display === "none") {
+    
+    x.style.display = "block";
+    buttontext.innerHTML = str +"˅";
+  } else {
+        x.style.display = "none";
+        buttontext.innerHTML = str +"˄";
+    }  
+    
+  
 
 }

@@ -1,5 +1,7 @@
 select { width: 400px; text-align-last:center; }
-
+#sidenav select {
+    width:100%;
+}
 #header {
 padding-left:0px;
 padding-right:0px;
@@ -89,8 +91,5 @@ input[type="file"] {
     transform: rotate(45deg) translate(-8px, -8px);
   }
 
-  [contentEditable="true"]:empty:before {
-    content: attr(data-placeholder);
-    color: grey;
-  }
+ 
   
