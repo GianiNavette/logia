@@ -1,2 +1,2 @@
 # logia
-Projet qui 
+Projet pour le site web
