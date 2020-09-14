@@ -1,0 +1,20 @@
+select { width: 400px; text-align-last:center; }
+
+#header {
+padding-left:0px;
+padding-right:0px;
+height:100px;
+background-color:black;
+}
+
+.menutext {
+    display:flex;
+    flex-direction: column;
+}
+img {
+   
+    width:100%;
+}
+.imagediv {
+    text-align:center;
+}
