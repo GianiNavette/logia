@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="simu.js"></script>
 </head>
+<div id="main">
 <div id="header">
 
 </div>
@@ -20,19 +21,30 @@
 </select>
 <button onclick="myFunction()">Ajoutez</button>
 
-<div>
-    <input type="color" id="headercolor" name="head2" onChange="myFunction3()"
-           value="#000000">
-    <label>Fond barre de menu </label>
-</div>
-
-<div>
-    <input type="color" id="bodycolor" name="head2" onChange="myFunction4()"
-           value="#FFFFFF">
-    <label>Fond de page </label>
-
-<div class="menutext"><div id="myList2">
 
 </div>
+<div id="sidenav">
+    
+    <div class="hamburgerbouton change" onclick="sidebutton(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    <p>Réglage</p>
+    <div>
+        <input type="color" id="headercolor" name="head2" onChange="myFunction3()"
+               value="#000000">
+        <label>Fond barre de menu </label>
+    </div>
+    
+    <div>
+        <input type="color" id="bodycolor" name="head2" onChange="myFunction4()"
+               value="#FFFFFF">
+        <label>Fond de page </label>
+    
+    <div class="menutext"><div id="myList2">
+    
+    </div>
+  </div>
 
 </html>
