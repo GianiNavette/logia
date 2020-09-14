@@ -2,22 +2,60 @@ select { width: 400px; text-align-last:center; }
 #sidenav select {
     width:100%;
 }
+.menutext div > button:nth-child(1) {
+    cursor:pointer;
+   
+    background-color: white;
+    outline:none;
+    width: 80%;
+    padding:10px;
+    transition:background-color ease 200ms;
+}
+
+.menutext div > button:nth-child(2) {
+    cursor:pointer;
+    width: 20%;
+    padding:10px;
+}
+.settingp {
+margin:0px;
+}
+.colonne2 select {
+    width:50%;
+    }
+.colonne2 {
+
+display:flex;
+height:200px;
+width:100%;
+}
 #header {
 padding-left:0px;
 padding-right:0px;
 height:100px;
 background-color:black;
 }
-h1 {
-font-size: 36px;
-
+#reglagebutton {
+width:100%;
+padding:10px;
 }
+
+h1 {
+ 
+    font-size: 36px;
+    margin: 0px;
+}
+
 h2 {
     font-size: 26px;
-    
+    margin: 0px;
     }
 p {
+    margin: 0px;
     font-size:18px;
+}
+#sidenav p {
+    text-align: center;
 }
 #sidenav {
     width: 200px;
@@ -29,11 +67,15 @@ p {
     background: #1c1c1e;
 
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     color: white;
     transition:ease 300ms;
   }
-  
+  #sidenav::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
 
   
 #main {
@@ -62,6 +104,10 @@ body {
 input[type="file"] {
     display: none;
 }
+input[type="range"] {
+    width: 100%;
+}
+
 .hamburgerbouton {
     margin:5px;
     display: flex;

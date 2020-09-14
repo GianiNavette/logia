@@ -4,6 +4,7 @@
     <title>Simulateur Logia</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="simu.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <div id="main">
 <div id="header">
@@ -16,6 +17,7 @@
     <option value="h2">Titre secondaire</option>
     <option value="p">Paragraphe</option>
     <option value="img">image</option>
+    <option value="colonne2">▢|▢</option>
 </select>
 <button onclick="myFunction()">Ajoutez</button>
 
@@ -28,11 +30,12 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
-    <p>Réglage</p>
-    <button onclick="toggleMainSetting(this)" >Réglage principal ˄</button>
+    <p class="settingp">Réglage</p>
+    <button id="reglagebutton" onclick="toggleMainSetting(this)" >Réglage principal ˄</button>
+
     <div id="reglageprincipal">
-    <p style="text-align: center;">Taille des titres principales</p>
-    <select onchange="changefontSize(this,h1)" size="1">
+    <p class="settingp" style="text-align: center;">Taille des titres principales</p>
+    <select class="settingp" onchange="changefontSize(this,'h1')" size="1">
         <option>30px</option>
         <option>32px</option>
         <option>34px</option>
@@ -45,8 +48,8 @@
         <option>48px</option>
         <option>50px</option>
       </select>
-      <p style="text-align: center;">Taille des titres secondaires</p>
-    <select onchange="changefontSize(this,h2)" size="1">
+      <p class="settingp" style="text-align: center;">Taille des titres secondaires</p>
+    <select onchange="changefontSize(this,'h2')" size="1">
         <option>20px</option>
         <option>22px</option>
         <option>24px</option>
@@ -54,13 +57,13 @@
         <option>28px</option>
         <option>30px</option>
         <option>32px</option>
-        <option>34</option>
-        <option>36</option>
-        <option>38</option>
-        <option>40</option>
+        <option>34px</option>
+        <option>36px</option>
+        <option>38px</option>
+        <option>40px</option>
       </select>
-      <p style="text-align: center;">Taille des paragraphes</p>
-      <select onchange="changefontSize(this,p)" size="1">
+      <p class="settingp" style="text-align: center;">Taille des paragraphes</p>
+      <select onchange="changefontSize(this,'p')" size="1">
         <option>12px</option>
         <option>14px</option>
         <option>16px</option>
@@ -68,10 +71,10 @@
         <option>20px</option>
         <option>22px</option>
         <option>24px</option>
-        <option>26</option>
-        <option>28</option>
-        <option>30</option>
-        <option>32</option>
+        <option>26px</option>
+        <option>28px</option>
+        <option>30px</option>
+        <option>32px</option>
       </select>
       <div>
         <input type="color" id="headercolor" name="head2" onChange="myFunction3()"
@@ -86,9 +89,9 @@
     
     </div>
     
-    <div class="menutext"><div id="myList2">
     
-    </div>
   </div>
-
+  <div class="menutext"><div id="myList2">
+    
+</div>
 </html>

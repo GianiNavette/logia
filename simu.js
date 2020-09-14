@@ -17,28 +17,31 @@ function myFunction() {
         case 'img':
             b = b + 1;
             d1.insertAdjacentHTML('beforebegin', '<'+value3+' onclick="uploadImage('+b+','+c+')"; src="placeholder.jpg" id="image'+b+'"><'+value3+'/>');
-            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)">Image '+b+' ˅</button><div id="objet'+c+'" style="display:block;"><input id="inputimage'+b+'" type="file" onchange="readURL(this,'+b+');" /><button onClick="myFunction8('+b+')" >Petite</button><button onClick="myFunction9('+b+')" >Moyenne</button><button onClick="myFunction10('+b+')" >Grande</button></div></div>');        
+            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<div><button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)">Image '+b+' ˅</button><button class="btn" onClick="removeEl(this,'+b+','+c+',2)"><i class="fa fa-trash"></i></button></div><div id="objet'+c+'" style="display:block;"><input id="inputimage'+b+'" type="file" onchange="readURL(this,'+b+');" /><input type="range" min="1" max="100" step="1" value="40" oninput="changeSize(this.value,'+b+')" onchange="changeSize(this.value,'+b+')"><p class="settingp" id="valSizeImg'+b+'" >40%</p></div></div>');        
           break;
         case 'h1':
             nbh1=nbh1+1;
             a = a + 1;
             d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'">Texte<'+value3+'/>');
-            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh1+' ˅</button><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
-        break;
+            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<div><button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh1+' ˅</button><button class="btn" onClick="removeEl(this,'+a+','+c+',1)"><i class="fa fa-trash"></i></button></div><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
+            break;
           case 'h2':
             nbh2=nbh2+1;
             a = a + 1;
             d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'">Texte<'+value3+'/>');
-            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh2+' ˅</button><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
-          break;
+            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<div><button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh1+' ˅</button><button class="btn" onClick="removeEl(this,'+a+','+c+',1)"><i class="fa fa-trash"></i></button></div><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
+            break;
         case 'p':
             nbp=nbp+1;
             a = a + 1;
             d1.insertAdjacentHTML('beforebegin', '<'+value3+' class="title" data-placeholder="Texte" onclick="clickSpecificbutton('+c+')" contenteditable="true" id="'+a+'">Texte<'+value3+'/>');
-            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbp+' ˅</button><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
-          break;
+            document.getElementById('myList2').insertAdjacentHTML('beforebegin', '<div><button id="buttonObjet'+c+'" onclick="hideOtherEl(this,'+c+',true)" >'+text+' '+nbh1+' ˅</button><button class="btn" onClick="removeEl(this,'+a+','+c+',1)"><i class="fa fa-trash"></i></button></div><div id="objet'+c+'" style="display:block;"><label>Couleur du texte </label><input type="color" id="color'+a+'" name="head" onChange="myFunction2('+a+')" value="#000000"><button onClick="myFunction5('+a+')" >Gauche</button><button onClick="myFunction6('+a+')" >Centrer</button><button onClick="myFunction7('+a+')" >Droite</button></div></div>');
+            break;
+        case 'colonne2':
+            d1.insertAdjacentHTML('beforebegin', '<div class="colonne2"><select><option value="h2p" >Titre secondaire + Paragraphe</option><option value="divp" >Paragraphe</option><option value="divimg" >image</option></select><select><option value="h2p" >Titre secondaire + Paragraphe</option><option value="divp" >Paragraphe</option><option value="divimg" >image</option></select></div>');
+            break;    
         default:
-          console.log(`Sorry, we are out of ${expr}.`);
+          console.log(`Easter Eggs`);
       }
 
 
@@ -68,17 +71,12 @@ function myFunction7(var1) {
   
   document.getElementById(var1).style.textAlign = "right";
 }
-function myFunction8(var1) {
-  
-  document.getElementById("image" + ""+var1+"").style.width = "40%";
-}
-function myFunction9(var1) {
-  
-  document.getElementById("image" + ""+var1+"").style.width = "70%";
-}
-function myFunction10(var1) {
-  
-  document.getElementById("image" + ""+var1+"").style.width = "100%";
+function changeSize(valueslide,var1) {
+    document.getElementById("valSizeImg" + ""+var1+"").innerHTML = valueslide + "%";
+    document.getElementById("image" + ""+var1+"").style.width = valueslide + "%";
+
+
+    
 }
 
 function readURL(input,imageid) {
@@ -141,12 +139,20 @@ function hideOtherEl(buttontext,objetId,bool) {
 function changefontSize(selectTag,tagNamevar) {
     var listValue = selectTag.options[selectTag.selectedIndex].text;
     
-    var x = document.getElementsByTagName("h1");
+    var x = document.getElementsByTagName(tagNamevar);
+    
     var i;
     for (i = 0; i < x.length; i++) {
-      x[i].style.fontSize = listValue;
+        if(x[i].className === 'settingp') {
+
+
+        } else {
+            x[i].style.fontSize = listValue;
+        }
+      
     }
 }
+
 function toggleMainSetting(buttontext) {
 
     let str = buttontext.innerHTML
@@ -165,4 +171,18 @@ function toggleMainSetting(buttontext) {
     
   
 
+}
+function removeEl(trashbutton,contentId,objetId,textorimage) {
+    if (textorimage == '1') {
+        var mycontobj = document.getElementById(contentId);
+    } else {
+        var mycontobj = document.getElementById("image"+""+contentId+"");
+    }
+    
+    var mysettingobj = document.getElementById("buttonObjet"+""+objetId+"");
+    var mysettingcontentobj = document.getElementById("objet"+""+objetId+"");
+    trashbutton.remove();
+    mycontobj.remove();
+    mysettingobj.remove();
+    mysettingcontentobj.remove();
 }
